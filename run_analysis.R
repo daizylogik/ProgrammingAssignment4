@@ -42,8 +42,8 @@ merged <- merged[, grepl("subject|activity|mean|std", colnames(merged))]
 # replace activities with labels
 merged$activity <- factor(merged$activity, levels = activities[, 1], labels = activities[, 2])
 
-names(merged) <- gsub("^f", "frequencyDomain", names(merged))
-names(merged) <- gsub("^t", "timeDomain", names(merged))
+names(merged) <- gsub("^f", "frequency", names(merged))
+names(merged) <- gsub("^t", "time", names(merged))
 names(merged) <- gsub("Acc", "Accelerometer", names(merged))
 names(merged) <- gsub("Gyro", "Gyroscope", names(merged))
 names(merged) <- gsub("Mag", "Magnitude", names(merged))
